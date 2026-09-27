@@ -19,7 +19,7 @@ public class SwapiService {
         StarWarsResponse response = swapiClient.obtenerPersonajes();
 
         return response.getResults().stream()
-                .filter(personaje -> "female".equalsIgnoreCase(personaje.getGender())) // Filtro de género
+                .filter(personaje -> "female".equalsIgnoreCase(personaje.getGender()))
                 .filter(personaje -> {
                     try {
                         int altura = Integer.parseInt(personaje.getHeight());
